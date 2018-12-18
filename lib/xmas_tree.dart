@@ -75,10 +75,12 @@ class XmasTree extends StatelessWidget {
       ballsRows.add(
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: List.generate(idxRow+1, (item) => XmasBall(Colors.pinkAccent)),
+          children: List.generate(idxRow+1, (item) => Padding(
+            padding: EdgeInsets.all(8.0),
+            child: XmasBall(Colors.pinkAccent),
+          )),
         )
-      );
+      ); 
     }
 
     return Column( 
